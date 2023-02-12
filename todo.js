@@ -20,4 +20,13 @@ document.getElementById('btn').addEventListener('click', function() {
     tableBody.appendChild(tr);
     bookName.value = '';
     authorName.value = '';
+
+    const deleteButtons = document.querySelectorAll('#btn-01')
+    for (const deleteButton of deleteButtons) {
+        deleteButton.addEventListener('click', function(event) {
+            event.target.parentNode.parentNode.style.display = 'none'
+        })
+    }
+
+
 })
